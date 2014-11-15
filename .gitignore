@@ -1,0 +1,5 @@
+twitter4j.properties
+*.iml
+target/*
+src/main/resources/twitter4j.properties
+.idea/*
