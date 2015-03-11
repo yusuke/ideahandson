@@ -23,12 +23,6 @@ Preferences -> Plugins -> Install JetBrains plugin.. よりLiveEdit、Chrononプ
 LiveEdit機能によりHTML/JavaScriptのリアルタイム編集を行うのに必要です。
 Chromeを開いて[chrome web store](https://chrome.google.com/webstore/category/apps)より"JetBrains"を検索してインストールしてください。無償でご利用いただけるChromeエクステンションです。
 
-### ハードウェア: WiFiルータまたはテザリングできる携帯電話
-時間が限られる中、多数の参加希望者を可能な限りサポートさせて頂くため当日はチャットルームを用意する予定です。
-チューターだけでなく参加者同士でも助け合いながらハンズオンを進めて頂ければ幸いです。全員がテザリングを行うとネットワークが輻輳してしまう場合がございます。極力近くにお座りの方とネットワークをシェアしていただきますようお願い致します。
-(会場でのネットワークの提供はございません)
-
-
 #プロジェクト内のナビゲート、の準備
 1. Twitter4Jのプロジェクトを開く
 [こちらからダウンロード](http://twitter4j.org/archive/twitter4j-4.0.2.zip)、または[こちらからclone](https://github.com/yusuke/twitter4j)したTwitter4JのプロジェクトをIDEAで開く
