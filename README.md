@@ -57,7 +57,8 @@ Fizz Buzzは数値を3で割り切れるときは"fizz"、5で割り切れると
 
 1. FizzBuzzクラスを作成し、mainメソッドを作成
 2. foriとタイプしてtab(LiveTemplate)、インデックスを0から99までループするコードを作成
-3. i%3==0ifとタイプしてtab(postfix completion)、"fizz".soutとタイプしてtab(postfix completion)
+3. i%3==0.ifとタイプしてtab(postfix completion)、"fizz".soutとタイプしてtab(postfix completion)
+postfix completionの一覧/編集はPrefernces > Editor > General > Postfix Completionより行えます
 4. 同様に5で割り切れる場合は"buzz"とプリントさせる
 5. 次にif(i%3!=0&&i%5!=0とタイプしてShift+Cmd+Enter(complete current statement)、3でも5でも割り切れない場合の条件部を完結させる
 6. i.soutとタイプしてtab(postfix completion)
@@ -97,41 +98,3 @@ Run *** with Chronon(実行ボタンの三つ右の黄色いアイコン)より�
 6. 画面下部にFindタブが現れるのでfrtとタイプ、FindResourcesTestを展開、ghtとタイプ、testFavoriteMethodsを絞り出しジャンプ
 7. testFavoiteMethods内でShift+Ctrl+F9を押しデバッグ(テストに必要なファイルがないのでテストは失敗します)
 8. Shift二回でsearch everywhereポップアップを表示、cbと入力してConfigurationBuilderを選択、ジャンプ
-
-#時間のある方はTwitter4Jを使った簡単なコードをChrononでデバッグしてみましょう
-
-#dev.twitter.comにおけるアプリケーション登録、アクセストークン作成
-1. [dev.twitter.com](https://apps.twitter.com/app/new)にアクセス
-2. Twitterアカウントでログイン
-3. Name、Description(10文字以上)、Website(とりあえずhttps://twitter.com/自分のアカウント、でもOK)を記入
-4. 開発者規約をよく読んで承諾したらYes, I agreeにチェックを入れてアプリ登録
-5. Details>Application Settings>Access level>modify app permissionsより"Read and Write"に変更してアプリケーションからのツイートを可能にする
-6. API Keysのタブに移動し、Access levelがRead and writeになっているのを確認する(反映までしばらく時間がかかることもあるので、なっていない場合は1、2分待ってリロード
-7. API Keys>Create my access tokenを押してアクセストークンを生成。  
-しばらく待ってからリロードするとアクセストークンが生成されているのでAPI key、API secret、Access token、Access token secretをsrc/main/resources/twitter4j.propertiesに保存  
-![access token](./images/access_token.jpeg)  
-![twitter4j.properties](./images/twitter4j-prop.jpeg)  
-参考:[Twitter4J-設定](http://twitter4j.org/ja/configuration.html)
-
-#ホームタイムラインのダンプ
-1. 新しいクラスを作り、mainメソッド内に"TwitterFactory"と記載
-2. シンボルを解決出来ず、赤くハイライトされるのでalt+Enter>Add Maven Dependencyよりtwitter4j、バージョン4.xを依存に追加  
-![maven-dep](./images/add-maven-dep.png)  
-Twitter4Jが見つからない場合はPreferences>Maven>Repositoriesよりrepo1.maven.org/maven2を選択してUpdate  
-![maven-dep](./images/maven-index.png)
-3. 依存を追加したら、もう一度alt+Enter>Import Classでtwitter4j.TwitterFactoryをインポート
-4. ".ge"と入力し、補完候補(getSingleton)が現れたらTabを押して補完
-5. さらに".var"と入力し、変数を導入([postfix completion](http://blog.jetbrains.com/jp/2014/03/19/433))
-6. Twitter型の変数より、getHomeTimeline()を呼び出し、さらにその戻り値もpostfix completionで変数に代入
-7. TwitterExceptionをキャッチしていないと警告が出るので赤線が出ている箇所でalt+Enter>Add Exeption to Method Signatureで例外宣言を追加
-8. homeTimelineとタイプしたら.forとタイプしてtab、拡張for文を作成
-9. status.getText()とタイプして.sout、タブ。status.getText()をプリントするコードにする
-10. 実行  
-![hometimeline](./images/hometimeline.jpeg)
-
-#Chrononを使ったデバッグ
-Run>Edit Configurations...>Chrononよりタイムラインをダンプするクラスと、twitter4j.*をChrononのカバー対象として設定  
-![chronon-config](./images/chronon-config.jpeg)  
-Run *** with Chronon(実行ボタンの三つ右の黄色いアイコン)より実行  
-![run-with-chronon](./images/run-with-chronon.jpeg)  
-
