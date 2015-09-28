@@ -48,8 +48,8 @@ Chromeを開いて[chrome web store](https://chrome.google.com/webstore/category
 5. "psvm"とタイプし、tab(LiveTemplate機能によりpublic static void mainに展開される)
 6. "sout"とタイプし、tab
 7. "Hello World"をタイプ
-8. Shift + Ctrl + F10(またはRun>Run...)より実行  
-Shift + Ctrl + F10では今カーソルがあるクラスのmainメソッド、またはカーソルがある位置のテストメソッド、テストケースだけれどもテストメソッド内にカーソルがない場合はそのテストクラスのテスト全てを実行する設定を仮に作って実行してくれます。実行時のパラメータなどを指定したい場合は右上のプルダウンメニューよりEdit Configruations...を、実行設定を保存したい場合はSave *** Configurationを選びます。  
+8. Shift + Ctrl + R(またはRun>Run...)より実行  
+Shift + Ctrl + Rでは今カーソルがあるクラスのmainメソッド、またはカーソルがある位置のテストメソッド、テストケースだけれどもテストメソッド内にカーソルがない場合はそのテストクラスのテスト全てを実行する設定を仮に作って実行してくれます。実行時のパラメータなどを指定したい場合は右上のプルダウンメニューよりEdit Configruations...を、実行設定を保存したい場合はSave *** Configurationを選びます。  
 ![runconfig](./images/runconfig.png)
 
 #Fizz Buzz
@@ -77,7 +77,7 @@ Run *** with Chronon(実行ボタンの三つ右の黄色いアイコン)より�
 ![createhtml](./images/htm.jpg)
 
 2. bodyタグ内でdiv.myclass{Hello World}を記入、tab(Emmet/Live Template)
-3. Shift+Ctrl+F9でChromeでデバッグ(Chrome以外のブラウザが立ち上がる場合はindex.htmlのEdit Configurations->BrowserよりChromeを選択)
+3. Shift+Ctrl+DでChromeでデバッグ(Chrome以外のブラウザが立ち上がる場合はindex.htmlのEdit Configurations->BrowserよりChromeを選択)
 ![chrome](./images/chrome.jpg)
 4. ブラウザとIntelliJ IDEAを横に並べる形にウインドウを整理。エディタペインが小さくなってしまうのでShift+Cmd+F12でエディタペインを最大化(もう一度Shift+Cmd+F12で戻ります)
 5. myclassにカーソルを当て、Alt+Enter、Create Selectorを選択し、Current fileを選択。スタイルシートのmyclassを生成
@@ -85,7 +85,7 @@ Run *** with Chronon(実行ボタンの三つ右の黄色いアイコン)より�
 7. "font-s"と入力。font-sizeが候補として挙がるので選択。100pxと入力
 8. リアルタイムに編集結果が反映されているのを確認。LiveEditプラグイン(IDEA側)、JetBrainsプラグイン(Chrome側)がうまく働いている必要があります。LiveEditがうまく働かない場合(特にJetBrains IDEを複数開いている場合に発生する)はIDEAとChrome両方を再起動すると直ります
 9. myclassにカーソルを当て、Shift+F6(Rename..)を押してリネームダイアログを出し、biggerという名前にする。スタイルシート側も、div側も同時に名前が変更されているのを確認
-10. Cmd+Wを押し(Extend SelectionまたはStructural Selection)、biggerを選択、Ctrl+G(Add Selection for next occurrence)。biggerのスタイル定義箇所と、利用箇所両方にカーソルを当てる(マルチカーソル)
+10. Alt+↑を押し(Extend SelectionまたはStructural Selection)、biggerを選択、Ctrl+G(Add Selection for next occurrence)。biggerのスタイル定義箇所と、利用箇所両方にカーソルを当てる(マルチカーソル)
 ![multi-cursor](./images/multi-cursor.jpg)
 11. クラス名を任意の名前に編集
 
